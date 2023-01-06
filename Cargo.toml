@@ -2,7 +2,7 @@
 name = "extension-trait"
 version = "1.0.1"
 edition = "2018"
-authors = ["Konrad Borowski <konrad@borowski.pw>"]
+authors = ["Konrad Borowski <konrad@borowski.pw>, Benedikt Weber <benedikt.weber@itemis.de>"]
 repository = "https://gitlab.com/KonradBorowski/extension-trait"
 license = "MIT OR Apache-2.0"
 description = "Macro to declare extension traits"
@@ -14,7 +14,11 @@ readme = "README.md"
 [lib]
 proc-macro = true
 
+[features]
+async_trait = []
+
 [dependencies]
 proc-macro2 = "1.0.6"
 syn = { version = "1.0.7", features = ["full"] }
 quote = "1.0.2"
+darling = "0.14.2"
